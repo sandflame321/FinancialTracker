@@ -12,15 +12,8 @@ namespace FinancialTracker.Models.Domain
 
         public Rekening(decimal bedrag, RekeningType type)
         {
-            try
-            {
-                this.Bedrag = bedrag;
-                this.Type = type;
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Voer een juist type rekening in.");
-            }
+            this.Bedrag = bedrag;
+            this.Type = type;
         }
     }
 }

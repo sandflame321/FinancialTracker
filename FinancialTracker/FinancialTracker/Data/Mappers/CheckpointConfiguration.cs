@@ -13,6 +13,14 @@ namespace FinancialTracker.Data.Mappers
         public void Configure(EntityTypeBuilder<Checkpoint> builder)
         {
             builder.ToTable("Checkpoints");
+            builder.HasKey(t => t.Date);
+
+            builder.Property(t => t.portefeuille).IsRequired();
+            builder.Property(t => t.spaarrekening).IsRequired();
+            builder.Property(t => t.bankkaart).IsRequired();
+            builder.Property(t => t.Bedrag).IsRequired();
+            builder.Property(t => t.Conclusie).IsRequired();
+            builder.Property(t => t.ToekomstZicht).IsRequired();
         }
     }
 }
